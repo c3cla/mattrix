@@ -1,0 +1,92 @@
+/* Estilos generales del contenedor */
+.cursos-docente {
+    background-color: #000;
+    color: #00ff00;
+    font-family: 'Courier New', Courier, monospace; 
+    padding: 30px;
+    border-radius: 15px;
+    width: 0 auto;
+    max-height: 600px;
+    overflow-y: auto;
+  }
+  
+  /* Título */
+  .cursos-docente h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  
+  /* Lista */
+  .cursos-docente ul {
+    list-style-type: none;
+    padding: 10px 15px;
+  }
+  
+  .cursos-docente li {
+    margin-bottom: 18px;
+  }
+  
+  /* Botones */
+  .button {
+    --main-color: rgba(114, 239, 97, 0.937);
+    --main-bg-color: rgba(46, 213, 185, 0.429);
+    --pattern-color: rgba(46, 210, 213, 0.251);  
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    background: radial-gradient(circle, var(--main-bg-color) 0%, transparent 95%),
+                linear-gradient(var(--pattern-color) 1px, transparent 1px),
+                linear-gradient(to right, var(--pattern-color) 1px, transparent 1px);
+    background-size: cover, 15px 15px, 15px 15px;
+    background-position: center;
+    border: 1px solid transparent;
+    border-image: radial-gradient(circle, var(--main-color) 0%, transparent 100%) 1;
+    color: var(--main-color);
+    padding: 1.3rem 1.5rem;  
+    font-weight: 700;
+    font-size: 1.3rem;
+    transition: background-size 0.2s ease-in-out, filter 0.2s;
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+    filter: hue-rotate(299deg);
+  }
+  
+  .button:hover {
+    background-size: cover, 10px 10px, 10px 10px;
+  }
+  
+  .button:active {
+    filter: hue-rotate(180deg);
+  }
+  
+  .cursos-docente::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  .cursos-docente::-webkit-scrollbar-track {
+    background: #000;
+  }
+  
+  .cursos-docente::-webkit-scrollbar-thumb {
+    background-color: #ff0080a1;
+    border-radius: 10px;
+    border: 3px solid #000;
+  }
+  
+  /* Diseño responsivo */
+  @media (max-width: 768px) {
+    .cursos-docente {
+      padding: 15px;
+    }
+  
+    .cursos-docente h3 {
+      font-size: 20px;
+    }
+  
+    .button {
+      font-size: 16px;
+      padding: 1.5rem 2rem; 
+    }
+  }

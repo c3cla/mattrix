@@ -1,0 +1,173 @@
+/* Contenedor principal que divide la pantalla en 80% y 20% */
+.espacio-muestral-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Contenedor izquierdo para los elementos principales */
+.contenedor-izquierdo {
+    width: 80%; /* Ocupa el 80% de la pantalla */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-right: 10px;
+    box-sizing: border-box;
+}
+
+/* Barra de progreso en la parte superior del contenedor izquierdo */
+.barra-progreso {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+/* Instrucciones */
+.instrucciones, .reloj {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* Reloj */
+.reloj p {
+    font-size: 16px;
+    color: #333;
+}
+
+/* Estilo para recuadro-principal */
+.recuadro-principal {
+    width: 100%;
+    background-color: #ffffff;
+    border: 1px solid #eb3030;
+    margin-bottom: 20px;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Simbolos dentro de recuadro-principal */
+.simbolos-recuadro {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 10px;
+    overflow-x: auto;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+.simbolo-recuadro {
+    width: 120px;
+    height: 120px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.simbolo-recuadro img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Espacio muestral */
+.espacio-muestral {
+    width: 100%;
+    background-color: #e6f7ff;
+    border: 1px solid #91d5ff;
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.espacio-muestral .resultados {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.simbolo {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    width: 110px;
+    height: 110px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.simbolo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Columna de símbolos ajustada al 20% de la derecha */
+.columna-simbolos {
+    width: 15%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas de símbolos */
+    gap: 10px;
+    padding: 30px;
+    background-color: #f5c3c3;
+    align-content: flex-start;
+    box-sizing: border-box;
+}
+
+.columna-simbolos .simbolo {
+    width: 100px;
+    height: 100px;
+    background-color: #fff;
+    border: 1px solid #719ae6;
+    text-align: center;
+    cursor: pointer;
+}
+
+/* Barra inferior */
+.barra-inferior {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #ffffff;
+    padding: 20px;
+    text-align: center;
+    border-top: 1px solid #ccc;
+}
+
+
+.barra-inferior button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Retroalimentación emergente */
+.retroalimentacion {
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -20%);
+    background-color: #fff;
+    padding: 20px;
+    border: 2px solid #ccc;
+    text-align: center;
+    z-index: 1000;
+}
+
+.retroalimentacion .simbolos-correctos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.retroalimentacion button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    cursor: pointer;
+}

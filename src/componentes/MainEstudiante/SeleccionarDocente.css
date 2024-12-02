@@ -1,0 +1,89 @@
+/* Estilos para el botón principal */
+.boton-seleccionar-docente {
+  background-color: #bb73e7; /* Verde llamativo */
+  color: white;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.boton-seleccionar-docente:hover {
+  background-color: #9441b0; /* Cambia de tono al pasar el mouse */
+}
+
+/* Estilos para el modal */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000; /* Asegura que el modal esté encima de otros elementos */
+}
+
+.modal-content {
+  background: grey;
+  padding: 30px;
+  border-radius: 8px;
+  width: 400px;
+  max-width: 90%;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.modal-content h3 {
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+}
+
+.modal-select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Botones dentro del modal */
+.modal-buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.boton-modal {
+  flex: 1;
+  padding: 10px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.boton-modal.cancelar {
+  background-color: #f44336; /* Rojo para el botón de cancelar */
+  color: white;
+}
+
+.boton-modal.cancelar:hover {
+  background-color: #d32f2f;
+}
+
+.boton-modal:not(.cancelar) {
+  background-color: #4CAF50; /* Verde para el botón de enviar */
+  color: white;
+}
+
+.boton-modal:not(.cancelar):hover {
+  background-color: #45a049;
+}

@@ -1,0 +1,95 @@
+/* Barra inferior */
+.barra-inferior {
+    width: 100%;
+    background-color: rgba(230, 204, 248, 0.075);
+    border-top: 1px solid rgba(214, 212, 212, 0.404);
+    padding: 20px; /* Ajusta el espaciado para que no ocupe tanto */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    transition: background-color 0.3s ease;
+    z-index: 50;
+  }
+  
+  .barra-inferior.correcto {
+    background-color: #52f3a8;
+    color: rgb(4, 4, 4);    
+    border-radius: 40px 40px 0px 0px;
+    padding-top: 10px;
+  }
+  .barra-inferior.incorrecto {
+    background-color: hsl(4, 82%, 65%);
+    border-radius: 40px 40px 0px 0px;
+    width: 1000px;
+    height: 400px;
+    margin-top: -110px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+  
+  /* Pingüino */
+
+  .pinguino-feedback{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .pinguino-feliz,
+  .pinguino-triste {
+    display: flex;
+    width: 180px;
+    border-radius: 50px;
+    filter: drop-shadow(10px 10px 10px hsl(108, 70%, 62%));
+  }
+  
+  /* Contenido de barra */
+  .contenido-barra {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0px;
+    
+  }
+  
+  /* Mensaje burbuja */
+  .mensaje-burbuja {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 15px;
+    border-radius: 10px;
+    color: black;
+    max-width: 900px;
+    margin: 10px 40px;
+    text-align: justify;
+  }
+  
+  /* Botón comprobar */
+  .boton-comprobar {
+    background-color: #9f68cd;
+    color: rgb(255, 254, 254);
+    border: none;
+    padding: 15px 40px;
+    font-size: 18px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-left: auto; /* Alinea el botón a la derecha */
+  }
+  .boton-comprobar:hover {
+    background-color: #5b75e2;
+  }
+
+
+  @media (max-width: 600px) {
+    .contenido-barra {
+      flex-direction: column;
+      align-items: center;
+    }
+    .mensaje {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+  }
+  

@@ -1,0 +1,106 @@
+/* Resumen.css */
+
+.resumen-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../assets/fondo-resumen.png'); 
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .resumen-contenedor {
+    background-color: rgba(227, 210, 253, 0.75); /* Blanco semitransparente */
+    padding: 20px;
+    border-radius: 30px;
+    text-align: center;
+    max-width: 600px;
+    width: 90%;
+  }
+  
+  .animacion img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 100%;
+    filter: drop-shadow(10px 10px 10px rgba(91, 2, 113, 0.411));
+  }
+  
+  .resumen-tabla {
+    margin-top: 20px;
+  }
+  
+  .resumen-tabla h2 {
+    margin-bottom: 10px;
+  }
+  
+  .resumen-tabla table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .resumen-tabla th,
+  .resumen-tabla td {
+    border-bottom: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  .resumen-tabla th {
+    background-color: rgb(242, 242, 242, 0.6);
+  }
+  
+  .resumen-tabla tfoot td {
+    font-weight: bold;
+    border-top: 2px solid #ddd;
+  }
+  
+  .icono-correcto {
+    color: green;
+    font-size: 24px;
+  }
+  
+  .icono-incorrecto {
+    color: red;
+    font-size: 24px;
+  }
+  
+  .resumen-porcentaje {
+    margin-top: 20px;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .resumen-botones {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .resumen-botones button {
+    background-color: transparent;
+    border: none;
+    margin: 0 20px;
+    font-size: 18px;
+    cursor: pointer;
+    outline: none;
+  }
+  
+  .resumen-botones img {
+    display: block;
+    margin: 10px auto 0;
+    width: 50px;
+    height: 50px;
+  }
+  
+  .boton-repetir {
+    color: #0877ec;
+  }
+  
+  .boton-continuar {
+    color: #7f0fac;
+  }
+  

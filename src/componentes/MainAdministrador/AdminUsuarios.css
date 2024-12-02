@@ -1,0 +1,96 @@
+.admin-usuarios {
+    padding: 20px;
+    background-color: black;
+  }
+
+  .admin-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #00ff00;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .search-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+  
+  .admin-table th {
+    cursor: pointer;
+    background-color: #4caf50;
+    color: white;
+  }
+  
+  .admin-table th:hover {
+    background-color: #45a049;
+  }
+  
+  .admin-dropdown {
+    width: 100%;
+    padding: 8px;
+    margin: 8px 0;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+
+  /* General input styles for consistency */
+.modal input[type="text"],
+.modal input[type="email"],
+.modal select {
+  width: 100%;
+  padding: 8px;
+  margin: 8px 0;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+/* Set the background of the modal */
+.modal {
+  background-color: #ccc;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 400px;
+  width: 100%;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  color: #000;
+}
+
+/* Optional: Style for modal overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6); 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+/* Título en el modal */
+.modal h2 {
+    color: #00ff00;
+    font-size: 24px;
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+.modal input[type="password"] {
+    width: 100%;
+    padding: 8px;
+    margin: 8px 0;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}

@@ -1,0 +1,30 @@
+.estadistica-curso {
+    padding: 20px;
+  }
+  
+  .etapa-item {
+    margin-top: 10px;
+  }
+  
+  .etapa-header {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  
+  .barra-progreso {
+    background-color: #e0e0e0;
+    border-radius: 4px;
+    overflow: hidden;
+    width: 60%;
+    height: 10px;
+    margin: 0 10px;
+  }
+  
+  .barra-relleno {
+    height: 100%;
+    background-color: #ff9933;
+    transition: width 0.3s ease;
+  }
+  

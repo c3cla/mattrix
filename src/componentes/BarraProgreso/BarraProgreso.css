@@ -1,0 +1,18 @@
+/* barraProgreso.css */
+
+.barra-progreso {
+  width: 100%;
+  background-color: #e2918a3a; 
+  border-radius: 20px; 
+  overflow: hidden; 
+  height: 20px; 
+}
+
+.progreso {
+  height: 100%;
+  background-color: #5b75e2; 
+  border-radius: 20px 0 0 20px; /* Bordes redondeados solo en el lado izquierdo */
+  position: relative; 
+  transition: width 0.5s ease; 
+}
+

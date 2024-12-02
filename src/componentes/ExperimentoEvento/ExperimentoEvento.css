@@ -1,0 +1,158 @@
+/* ExperimentoEvento.css */
+
+/* Importar la fuente retro al inicio del archivo */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+.experimento-evento-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative; /* Contexto para posicionamiento absoluto */
+  box-sizing: border-box;
+}
+
+.conceptos-voladores {
+  position: relative; /* Necesario para posicionamiento absoluto de hijos */
+  width: 100%;
+  max-width: 800px;    /* Ajusta según tus necesidades */
+  height: 60vh;       /* Ajusta según tus necesidades */
+  margin-top: 20px;
+  border: 1px solid #ddd; /* Opcional: visualización del contenedor */
+  overflow: hidden;       /* Evita que los elementos salgan del contenedor */
+}
+
+.recuadro-experimento {
+  background-color: #f0f0f0;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  font-size: 1.5em;
+  width: 150px; 
+  height: 150px; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center;
+  position: absolute; /* Posicionamiento absoluto */
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  max-width: 100%;   /* Asegura que no se sobrepase el contenedor */
+  max-height: 100%; 
+  /* Agregar transiciones para top y left para suavizar el movimiento */
+  transition: top 0.05s linear, left 0.05s linear;
+  cursor: pointer; /* Cambiar el cursor para indicar que es interactivo */
+}
+
+.recuadro-experimento.connected {
+  border-color: #31708f; /* Cambia el color del borde al estar conectado */
+  background-color: #cce5ff; /* Cambia el fondo para destacar */
+  /* Añadir una sombra más intensa */
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.evento-y-boton {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.recuadro-evento {
+  padding: 20px;
+  width: 300px;
+  height: 100px;
+  background-color: #d9edf7;
+  border: 2px solid #31708f;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 1.2em;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  
+  /* Opcional: Estilo adicional para resaltar el evento */
+  color: #31708f;
+  cursor: pointer; /* Cambiar el cursor para indicar que es interactivo */
+}
+
+.boton-comprobar {
+  margin-left: 20px; /* Espacio entre el evento y el botón */
+  padding: 10px 20px;
+  font-size: 1em;
+  background-color: #28a745; /* Verde */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: 'Press Start 2P', cursive; /* Fuente retro */
+  transition: background-color 0.3s ease;
+}
+
+.boton-comprobar:hover {
+  background-color: #218838; /* Verde oscuro al pasar el cursor */
+}
+
+.temporizador {
+  margin-top: 10px; /* Espacio entre BarraProgreso y el temporizador */
+  font-size: 2em;    /* Tamaño de fuente grande para visibilidad */
+  color: #28a745;    /* Verde brillante */
+  font-family: 'Press Start 2P', cursive; /* Fuente retro */
+}
+
+.connections-svg {
+  position: absolute;
+  top: 20px; /* Ajusta según la posición de .conceptos-voladores */
+  left: 20px; /* Ajusta según la posición de .conceptos-voladores */
+  width: 760px; /* 800px - 2*20px padding */
+  height: 560px; /* 600px - 2*20px padding */
+  pointer-events: none; /* Permite que los clics pasen a través del SVG */
+}
+
+.connections-svg line {
+  stroke: #31708f; /* Color azul oscuro */
+  stroke-width: 2;
+  stroke-linecap: round;
+  opacity: 0.7; /* Transparencia para una apariencia más suave */
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10; /* Asegurar que esté encima de otros elementos */
+}
+
+.modal {
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+  width: 80%;
+  max-width: 400px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  font-family: 'Press Start 2P', cursive; /* Fuente retro */
+}
+
+.modal p {
+  font-size: 1.2em;
+  color: #dc3545; /* Rojo para indicar error */
+  margin-bottom: 20px;
+}
+
+.boton-seguir-intentando {
+  padding: 10px 20px;
+  font-size: 1em;
+  background-color: #28a745; /* Verde */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: 'Press Start 2P', cursive; /* Fuente retro */
+  transition: background-color 0.3s ease;
+}
+
+.boton-seguir-intentando:hover {
+  background-color: #218838; /* Verde oscuro al pasar el cursor */
+}

@@ -1,0 +1,49 @@
+.main-administrador {
+  display: flex;
+  height: 100vh;
+  background-color: #121212;
+  color: #00ff00;
+  font-family: 'Courier New', monospace;
+}
+
+.barra-lateral {
+  width: 20%;
+  padding: 20px;
+  background: #0f0f0f;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  box-shadow: 4px 0 10px rgba(0, 255, 0, 0.2);
+}
+
+.contenido-principal {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  background-color: #1a1a1a;
+  border-radius: 8px;
+}
+
+/* Estilos para todos los botones de administración */
+.boton-admin {
+  background-color: #00ff00;
+  color: #0f0f0f;
+  padding: 10px 15px;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  font-family: 'Courier New', monospace;
+}
+
+.boton-admin:hover {
+  background-color: #00cc00;
+  transform: scale(1.05);
+}
+
+.boton-admin:active {
+  background-color: #009900;
+  transform: scale(0.98);
+}

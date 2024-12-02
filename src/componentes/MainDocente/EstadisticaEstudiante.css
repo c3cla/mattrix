@@ -1,0 +1,80 @@
+.dashboard-docente {
+  background-color: #121212;
+  color: #00ff00;
+  padding: 20px;
+  font-family: 'Courier New', monospace;
+}
+
+.dashboard-docente h2 {
+  color: #00ff00;
+  font-size: 1.8rem;
+  margin-bottom: 30px;
+  text-align: center;
+}
+.graficos-contenedor {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.grafico-tarjeta {
+  flex: 1;
+  background-color: rgba(0, 0, 0, 0.85);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 255, 0, 0.2);
+  transition: transform 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.grafico-tarjeta:hover {
+  transform: scale(1.03);
+}
+
+.grafico-tarjeta h4 {
+  color: #00ff00;
+  margin-bottom: 15px;
+}
+
+/* Contenedor para la tabla */
+.tabla-contenedor {
+  margin-top: 20px;
+}
+
+.tabla-tarjeta {
+  background-color: rgba(0, 0, 0, 0.85);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 255, 0, 0.2);
+}
+
+.tabla-tarjeta h4 {
+  color: #00ff00;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.tabla-detalle {
+  width: 100%;
+  border-collapse: collapse;
+  color: #00ff00;
+}
+
+.tabla-detalle th,
+.tabla-detalle td {
+  padding: 10px;
+  border: 1px solid #00ff00;
+  text-align: center;
+}
+
+.tabla-detalle th {
+  background-color: rgba(0, 255, 0, 0.15);
+}
+
+.tabla-detalle tr:nth-child(even) {
+  background-color: rgba(255, 255, 255, 0.05);
+}

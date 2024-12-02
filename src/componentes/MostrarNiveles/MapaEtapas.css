@@ -1,0 +1,136 @@
+.mapa-niveles {
+  display: flex;
+  height:100vh;
+  background-color: #121212;
+  color: #00ff00;
+  font-family: 'Courier New', monospace;
+}
+
+
+.barra-lateral {
+  width: 20%;
+  padding: 20px;
+  background: #0f0f0f;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  box-shadow: 4px 0 10px rgba(0, 255, 0, 0.2);
+  height: 100vh;
+  position: fixed;
+  overflow-y: auto;
+}
+
+
+.mapa-container {
+  flex: 1;
+  padding: 20px;
+  margin-left: 20%; 
+  height: 90vh;
+  overflow-y: auto;
+  background-color: #1a1a1a;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+
+.mapa {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.fondo-mapa {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+
+.lineas-camino {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+
+
+.etapa {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.etapa:hover .imagen-etapa {
+  transform: scale(1.2);
+}
+
+.imagen-etapa {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+
+.etapa.proxima-etapa .imagen-etapa {
+  animation: latido 1.5s infinite;
+}
+
+@keyframes latido {
+  0%, 100% {
+      transform: scale(1);
+  }
+  50% {
+      transform: scale(1.2);
+  }
+}
+
+
+.etapa-completada .imagen-etapa {
+  animation: entradaPingüino 1s ease-out forwards;
+}
+
+@keyframes entradaPingüino {
+  0% {
+      transform: translateX(-200%) scale(0.8);
+      opacity: 0;
+  }
+  100% {
+      transform: translateX(0) scale(1);
+      opacity: 1;
+  }
+}
+
+
+.tooltip {
+  display: none;
+  position: absolute;
+  bottom: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 4px;
+  text-align: center;
+  width: 150px;
+}
+
+.etapa:hover .tooltip {
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .imagen-etapa {
+      width: 40px;
+      height: 40px;
+  }
+
+  .tooltip {
+      width: 120px;
+      bottom: 50px;
+  }
+}

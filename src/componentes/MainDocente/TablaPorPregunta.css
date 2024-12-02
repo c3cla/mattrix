@@ -1,0 +1,111 @@
+/* Estilos de la tabla */
+.tabla-detalle {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .tabla-detalle th,
+  .tabla-detalle td {
+    border: 1px solid #00ff00;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .tabla-detalle th {
+    background-color: #000;
+    color: #00ff00;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  
+  .tabla-detalle tr:nth-child(even) {
+    background-color: #0a0a0a;
+  }
+  
+  .tabla-detalle tr:hover {
+    background-color: #0f0f0f;
+  }
+  
+  /* Tooltip en la celda de la etapa */
+  .etapa {
+    position: absolute;
+    cursor: pointer;
+    color: #00ff00;
+  }
+  
+  .etapa .etapa-descripcion {
+    visibility: hidden;
+    width: 200px;
+    background-color: #000;
+    color: #00ff00;
+    text-align: left;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #00ff00;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -100px;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  
+  .etapa:hover .etapa-descripcion {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  /* Flecha del tooltip */
+  .etapa .etapa-descripcion::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #00ff00 transparent transparent transparent;
+  }
+  
+  /* Modal */
+  .modal {
+    display: flex;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .modal-contenido {
+    background-color: #000;
+    color: #00ff00;
+    padding: 20px;
+    border: 1px solid #00ff00;
+    width: 80%;
+    max-width: 800px;
+    position: relative;
+  }
+  
+  .cerrar-modal {
+    color: #00ff00;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .cerrar-modal:hover,
+  .cerrar-modal:focus {
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  

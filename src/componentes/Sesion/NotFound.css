@@ -1,0 +1,101 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    height: 100%;
+  }
+  
+  .space-container {
+    width: 100vw;
+    height: 100vh;
+    background-color: #000;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .starfield {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
+  .content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    z-index: 1;
+  }
+  
+  .planet {
+    width: 300px;
+    height: 300px;
+    animation: float 6s ease-in-out infinite, rotate 60s linear infinite;
+  }
+  
+  .title {
+    font-size: 8rem;
+    margin: 0;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    animation: glow 2s ease-in-out infinite alternate;
+  }
+  
+  .subtitle {
+    font-size: 2rem;
+    margin: 0;
+    opacity: 0.8;
+  }
+  
+  .description {
+    font-size: 1.2rem;
+    max-width: 400px;
+    margin: 1rem auto;
+    opacity: 0.6;
+  }
+  
+  .home-button {
+    display: inline-block;
+    margin-top: 2rem;
+    padding: 10px 20px;
+    background-color: white;
+    color: black;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+  }
+  
+  .home-button:hover {
+    background-color: #0066cc;
+    color: white;
+    transform: scale(1.05);
+  }
+  
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+  
+  @keyframes glow {
+    from {
+      text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ff00de, 0 0 35px #ff00de, 0 0 40px #ff00de, 0 0 50px #ff00de, 0 0 75px #ff00de;
+    }
+    to {
+      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff00de, 0 0 70px #ff00de, 0 0 80px #ff00de, 0 0 100px #ff00de, 0 0 150px #ff00de;
+    }
+  }
+  
+  @keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }

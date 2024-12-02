@@ -1,0 +1,131 @@
+/* General */
+* {
+    box-sizing: border-box;
+  }
+  
+  /* Contenedor principal */
+  .contenedor-principal {
+    max-width: 1000px;
+    height: 90vh; /* Ocupa toda la altura de la pantalla */
+    margin: 0 auto;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .barra-lateral {
+    width: 20%;
+    padding: 20px;
+    background: #0f0f0f;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    box-shadow: 4px 0 10px rgba(0, 255, 0, 0.2);
+  }
+
+  .barra-superior {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 1000px;
+    position: relative;
+    margin: 0 auto;
+    padding: 15px;
+  }
+  
+  /* Botón Daltonico */
+  .boton-daltonico {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background-color: #e25bb8;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 14px;
+    border-radius: 20px;
+    cursor: pointer;
+    z-index: 1;
+  }
+  .boton-daltonico:hover {
+    background-color: #7917b6;
+  }
+
+  
+  /* Contenedor del problema */
+  .contenedor-problema {
+    max-width: 1000px;
+    padding: 30px;
+    flex: 1; /* Ajusta para ocupar el espacio restante */
+    text-align: justify;
+  }
+  
+  /* Encabezados */
+
+  h3 {
+    font-size: 24px;
+    font-weight:400;
+    margin-top: 0;
+  }
+  /* Espacio entre palabra y pelota en párrafo */
+  h3 svg {
+    margin-left: 5px;
+  }
+  
+  /* Contenedor de Pelotas */
+  .contenedor-pelotas {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+  }
+  .pelota {
+    filter: drop-shadow(4px 3px 4px rgba(0, 0, 0, 0.4));
+  }
+  
+  /* Opciones */
+  .opciones {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    gap: 20px;
+    padding: 0 10px;
+    margin-top: -100px;
+  }
+  .opcion {
+    background-color: #e8e8f6;
+    font-size: 20px;
+    border-radius: 10px;
+    padding: 20px;
+    cursor: pointer;
+    transition: all 0.2s;
+    flex: 1 1 calc(25% - 20px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 220px;
+    text-align: center;
+    border: 2px solid transparent;
+  }
+  .opcion:hover {
+    transform: scale(1.05);
+  }
+  .opcion.seleccionada {
+    border-color: #710dbe;
+    background-color: #d0d3ff;
+    transform: scale(1.05);
+  }
+  
+  
+  
+  @media (max-width: 600px) {
+    .opciones {
+      flex-direction: column;
+      align-items: center;
+    }
+    .opcion {
+      width: 80%;
+    }
+  }
+  
